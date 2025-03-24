@@ -1,0 +1,49 @@
+**README.md**
+```
+# Daily Tech News SMS Bot
+
+This project fetches the latest tech news using web scraping and sends daily updates to users via SMS using Twilio. The Flask application can also handle incoming SMS messages and respond accordingly.
+
+## Features
+- Scrapes the latest tech news from a source.
+- Sends daily news updates via SMS using Twilio.
+- Handles incoming SMS replies (feature commented out but available for use).
+- Can be extended to integrate OpenAI's GPT-3 for intelligent responses.
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone <repo_url>
+   cd <repo_name>
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. Set up your credentials in a `credentials.py` file:
+   ```python
+   Twilio_SID = "your_twilio_sid"
+   Twilio_Auth_Token = "your_twilio_auth_token"
+   Twilio_Phone_Number = "your_twilio_phone_number"
+   Client_Number = "recipient_phone_number"
+   ```
+
+## Running the Application
+
+To start the application and send daily news:
+```sh
+python app.py
+```
+
+To run Flask for handling incoming SMS:
+```sh
+flask run
+```
+
+## Future Improvements
+- Automate daily SMS using a task scheduler like `cron` (Linux) or `Task Scheduler` (Windows).
+- Improve the scraping mechanism for more reliable news extraction.
+- Enable two-way communication via SMS responses.
+- Integrate GPT-3 for intelligent replies.
